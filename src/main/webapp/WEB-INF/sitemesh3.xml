@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemesh>
+    <!-- Áp layout "web.jsp" cho mọi URL -->
+    <mapping path="/*" name="web" decorator="web.jsp" />
+
+    <!-- Áp layout "admin.jsp" cho các trang /admin/* -->
+    <mapping path="/admin/*" name="admin" decorator="admin.jsp" />
+
+    <!-- Áp layout "user.jsp" cho các trang /user/* -->
+    <mapping path="/user/*" name="user" decorator="user.jsp" />
+
+    <!-- Không áp layout cho các API -->
+    <mapping path="/v1/api*" name="api" exclude="true" />
+</sitemesh>
